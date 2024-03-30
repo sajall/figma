@@ -6,14 +6,19 @@
 
   .border-gradient {
 
-    background: rgb(2,0,36);
-background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(87,72,154,1) 59%, rgba(181,32,67,1) 92%);
+    background: rgb(13,24,36);
+    background: linear-gradient(10deg, rgba(13,24,36,1) 0%, rgba(71,59,125,1) 59%, rgba(181,32,67,1) 100%);
 
   }
 
   .linear-gradient {
     background: rgb(2,110,235);
 background: linear-gradient(60deg, rgba(2,110,235,1) 0%, rgba(87,72,154,1) 59%, rgba(181,32,67,1) 100%);
+  }
+
+  .btn-gradient{
+    background: rgb(246,60,2);
+background: linear-gradient(90deg, rgba(246,60,2,1) 27%, rgba(155,32,32,1) 98%);
   }
 
 }

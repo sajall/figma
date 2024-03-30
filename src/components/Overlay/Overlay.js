@@ -44,26 +44,27 @@ const Overlay = () => {
     },
     {
       img: " crown.png",
-      des: "VV Exclusive",
+      des: "VV Executive",
     },
     {
-      img: " group.png",
+      img: " Group1.png",
       des: "Hiring",
     },
     {
       img: " icon-location.png",
-      des: "UAE-Dubai",
+      des: "UAE Dubai",
     },
     {
-      img: " icon-department.png",
+      img: "icon-department.png",
       des: "Sales",
     },
     {
       img: " icon-role-level.png",
-      des: "Executive Level",
+      des: "executive level",
     },
+
     {
-      img: " icon-contract type.png",
+      img: "icon-contract type.png",
       des: "Full Time",
     },
     {
@@ -71,50 +72,53 @@ const Overlay = () => {
       des: "On Site",
     },
     {
-      img: " Group1.png",
+      img: " group.png",
       des: "$1.2K",
     },
     {
-      img: " icon-payment cycle.png",
+      img: "icon-payment cycle.png",
       des: "Monthly",
     },
     {
       img: " Vector1.png",
-      des: "28-march-2024",
+      des: "29-March-2024",
     },
   ];
 
   const lowerButtons = [
     {
-      img: "",
-      des: "Apply",
+      img: "apply.png",
     },
     {
       img: "react.png",
-      des: "React",
     },
     {
       img: "Share.png",
-      des: "Share",
     },
     {
-      img: "Rate.png",
-      des: "Rate",
+      img: "Rate-Rated.png",
     },
     {
-      img: "Save.png",
-      des: "Save",
+      img: "Save-Saved.png",
     },
     {
-      img: "Report.png",
-      des: "Report",
+      img: "report.png",
     },
+  ];
+
+  const lines = [
+    "active.png",
+    "list 1.png ",
+    "list 1.png",
+    "list 1.png",
+    "list 1.png",
   ];
 
   return (
     <>
       {/* <img src="Overlay.png" alt="" /> */}
-      <div className="border-gradient h-[100vh] w-[95vw] m-auto rounded-2xl flex flex-col justify-between">
+
+      <div className="bg-[url('/my.png')]  bg-no-repeat bg-cover bg-center h-[100vh] w-[95vw] m-auto rounded-2xl flex flex-col justify-between overflow-auto">
         <div className="flex p-5">
           <div className="flex relative justify-center items-center gap-4">
             <img src="icon-user.png" alt="" className=" " />
@@ -127,17 +131,18 @@ const Overlay = () => {
               Dr. Sofia Ibrahim
             </span>
           </div>
-          <div className="flex  ml-[25%]">
-            <img src="active.png" alt="" className="h-[20px]" />
-            <img src="list 1.png" alt="" className="h-[20px]" />
-            <img src="list 1.png" alt="" className="h-[20px]" />
-            <img src="list 1.png" alt="" className="h-[20px]" />
-            <img src="list 1.png" alt="" className="h-[20px]" />
+
+          {/* white and blue lines */}
+          <div className="hidden lg:flex ml-[25%] ">
+            {lines.map((line, i) => {
+              return <img key={i} src={line} alt="" className="h-[20px]" />;
+            })}
           </div>
+          {/* ===================== */}
         </div>
         {/* white text and icons */}
         <div>
-          <div className="flex gap-1 p-2 border-b-4 border-gray-500 w-[95%] m-auto">
+          <div className="flex flex-wrap gap-1 p-2 border-b-4 border-gray-500 w-[95%] m-auto ">
             {assets.map((item, i) => {
               return (
                 <div key={i} className="flex justify-center gap-1">
@@ -155,12 +160,18 @@ const Overlay = () => {
           {/* ------------------------------------ */}
 
           {/* buttons div */}
-          <div className="flex items-center gap-5 border-b-4 border-gray-500 w-[95%] m-auto p-2">
+          <div className="flex flex-wrap gap-1 items-center p-2 border-b-4 border-gray-500 w-[95%] m-auto">
             {buttons.map((item, i) => {
               return (
-                <div className="flex items-center gap-1  rounded-3xl bg-purple-400 px-2 ">
-                  <img src={item.img} alt="" />
+                <div
+                  className={`flex justify-center items-center ${
+                    i < 2 ? "btn-gradient" : "bg-purple-600"
+                  } rounded-full px-2 gap-2 h-[35px] text-white `}
+                >
+                  <img key={i} src={item.img} alt="" />
                   <span>{item.des}</span>
+
+                  <div></div>
                 </div>
               );
             })}
@@ -176,14 +187,9 @@ const Overlay = () => {
 
           {/* lowerButtons */}
 
-          <div className=" flex justify-center gap-5 w-[95%] m-auto p-3 text-white ">
+          <div className=" flex flex-wrap justify-center gap-5 w-[95%] m-auto p-3 text-white ">
             {lowerButtons.map((item, i) => {
-              return (
-                <div className="linear-gradient w-[100px] h-[30px] flex justify-center items-center gap-2 rounded-[50px] ">
-                  <img src={item.img} alt="" />
-                  <span>{item.des}</span>
-                </div>
-              );
+              return <img src={item.img} alt="" />;
             })}
           </div>
         </div>

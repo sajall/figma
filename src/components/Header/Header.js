@@ -1,5 +1,15 @@
 import Image from "next/image";
+import Drawer from "./Drawer";
+import { useState } from "react";
+
 const Header = () => {
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
     <>
       <header className="flex  justify-between p-2 px-8">
@@ -8,30 +18,31 @@ const Header = () => {
         </div>
         <div>
           <ul className="flex gap-3 cursor-pointer">
-            <li>
+            <li className="hidden sm:block">
               <img src="search.jpg" alt="" />
             </li>
-            <li>
+            <li className="hidden sm:block">
               <img src="create.jpg" alt="" />
             </li>
-            <li>
+            <li className="hidden sm:block">
               <img src="Filled.png" alt="" />
             </li>
-            <li>
+            <li className="hidden sm:block">
               <img src="msg.png" alt="" />
             </li>
-            <li>
+            <li className="hidden sm:block">
               <img src="heart.png" alt="" />
             </li>
-            <li>
+            <li className="hidden sm:block">
               <img src="money.png" alt="" />
             </li>
-            <li>
+            <li className="block sm:hidden" onClick={toggleDrawer}>
               <img src="hamburger.png" alt="" />
             </li>
           </ul>
         </div>
       </header>
+      <Drawer isOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
     </>
   );
 };
