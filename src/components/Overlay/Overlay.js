@@ -1,118 +1,12 @@
 import { useState } from "react";
+import {assets1} from '../utils/assets';
+import {buttons} from '../utils/assets';
+import {lowerButtons} from '../utils/assets';
+import {lines} from '../utils/assets';
+
 
 const Overlay = () => {
-  const assets = [
-    {
-      img: "",
-      description: "# ASS-PMP-JOB-229",
-    },
-    {
-      img: "privacy.png",
-      description: "Public",
-    },
-    {
-      img: "publishing date.png",
-      description: Date(),
-    },
-    {
-      img: "Applicants.png",
-      description: "1K",
-    },
-    {
-      img: "comments.png",
-      description: "100",
-    },
-    {
-      img: "Group.png",
-      description: "100",
-    },
 
-    {
-      img: "Shares.png",
-      description: "200",
-    },
-    {
-      img: "ratings.png",
-      description: "4.8(33)",
-    },
-  ];
-
-  const buttons = [
-    {
-      img: "icon-featured.png",
-      des: "Featured",
-    },
-    {
-      img: " crown.png",
-      des: "VV Executive",
-    },
-    {
-      img: " Group1.png",
-      des: "Hiring",
-    },
-    {
-      img: " icon-location.png",
-      des: "UAE Dubai",
-    },
-    {
-      img: "icon-department.png",
-      des: "Sales",
-    },
-    {
-      img: " icon-role-level.png",
-      des: "executive level",
-    },
-
-    {
-      img: "icon-contract type.png",
-      des: "Full Time",
-    },
-    {
-      img: " icon-work type.png",
-      des: "On Site",
-    },
-    {
-      img: " group.png",
-      des: "$1.2K",
-    },
-    {
-      img: "icon-payment cycle.png",
-      des: "Monthly",
-    },
-    {
-      img: " Vector1.png",
-      des: "29-March-2024",
-    },
-  ];
-
-  const lowerButtons = [
-    {
-      img: "apply.png",
-    },
-    {
-      img: "react.png",
-    },
-    {
-      img: "Share.png",
-    },
-    {
-      img: "Rate-Rated.png",
-    },
-    {
-      img: "Save-Saved.png",
-    },
-    {
-      img: "report.png",
-    },
-  ];
-
-  const lines = [
-    "active.png",
-    "list 1.png ",
-    "list 1.png",
-    "list 1.png",
-    "list 1.png",
-  ];
 
   return (
     <>
@@ -143,13 +37,13 @@ const Overlay = () => {
         {/* white text and icons */}
         <div>
           <div className="flex flex-wrap gap-1 p-2 border-b-4 border-gray-500 w-[95%] m-auto ">
-            {assets.map((item, i) => {
+            {assets1.map((item, i) => {
               return (
                 <div key={i} className="flex justify-center gap-1">
                   <img src={item.img} alt="" className="cursor-pointer" />
 
                   <span className="text-white">{item.description} </span>
-                  {i <= assets.length - 1 ? (
+                  {i <= assets1.length - 1 ? (
                     <span className="text-white">|</span>
                   ) : null}
                 </div>

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Overlay from "@/components/Overlay/Overlay";
 import Wrapper from "@/components/Wrapper/Wrapper";
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
  <Header/>
  <Overlay/>
  <Wrapper/>
+ <Footer/>
 
 
     </>
