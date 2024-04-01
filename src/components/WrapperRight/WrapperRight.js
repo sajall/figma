@@ -4,19 +4,19 @@ import {employers} from '../utils/assets'
 const WrapperRight = ()=>{
     return(
         <>
-    <div className="">
+    <div className="w-[100%] sm:w-[23%]">
             <div className="p-2 rounded-lg border border-gray-200">
-              <img src="Top-Carousel.png" alt="" className="cursor-pointer" />
+              <img src="Top-Carousel.png" alt="" className="cursor-pointer w-[100%]" />
             </div>
             {/* categories */}
             <div className="border border-gary-200 rounded-lg mt-4">
-              <div>
-                <img src="category.png" alt="" className="cursor-pointer" />
+              <div > 
+                <img src="category.png" alt="" className="cursor-pointer w-[100%]" />
               </div>
               <div className="p-3 flex flex-col gap-3 border-b-2 border-gray-200">
                 {category.map((item, i) => {
                   return (
-                    <div className="flex justify-between p-2 bg-gray-100 rounded-lg text-gray-500 font-medium">
+                    <div key={i} className="flex justify-between p-2 bg-gray-100 rounded-lg text-gray-500 font-medium">
                       <span>{item.name}</span>
 
                       <div class="bg-gradient-to-r from-blue-500 to-pink-700 p-[2px]">
@@ -27,7 +27,7 @@ const WrapperRight = ()=>{
                 })}
               </div>
               <div className="p-3">
-                <img src="Size A.png" alt="" className="cursor-pointer" />
+                <img src="Size A.png" alt="" className="cursor-pointer w-[100%]" />
               </div>
             </div>
             {/* categories */}
@@ -35,7 +35,7 @@ const WrapperRight = ()=>{
             {/* top 10 v-employers */}
             <div className="border border-gary-200 rounded-lg mt-4">
               <div>
-                <img src="header.png" alt="" className="cursor-pointer" />
+                <img src="header.png" alt="" className="cursor-pointer  w-[100%]" />
               </div>
               <div className="p-3 flex flex-col gap-3 border-b-2 border-gray-200">
                 {employers.map((item, i) => {
@@ -75,7 +75,7 @@ const WrapperRight = ()=>{
                 })}
               </div>
               <div className="p-3">
-                <img src="Size A.png" alt="" className="cursor-pointer" />
+                <img src="Size A.png" alt="" className="cursor-pointer w-[100%]" />
               </div>
             </div>
             {/* top 10 v-employers */}
@@ -83,13 +83,13 @@ const WrapperRight = ()=>{
             {/* Mid Ad carousel */}
 
             <div className=" rounded-lg border border-gray-200 mt-4">
-              <img src="midAd.png" alt="" className="cursor-pointer" />
+              <img src="midAd.png" alt="" className="cursor-pointer w-[100%]" />
             </div>
             {/* Mid Ad carousel */}
 
             {/* Lower mid ad */}
             <div className=" rounded-lg border border-gray-200 mt-4">
-              <img src="midAd2.png" alt="" className="cursor-pointer" />
+              <img src="midAd2.png" alt="" className="cursor-pointer w-[100%]" />
             </div>
             {/* Lower mid ad */}
 

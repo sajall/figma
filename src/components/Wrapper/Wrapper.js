@@ -5,9 +5,9 @@ import { assets } from "../utils/assets";
 const Wrapper = () => {
   return (
     <>
-      <div className="mt-[30px]   ">
+      <div className="mt-[30px]">
         {/*Top icons */}
-        <div className=" flex flex-wrap justify-center w-[50%] m-auto rounded-3xl p-2 gap-5 border-2 border-gray-300 shadow-xl">
+        <div className=" flex flex-wrap justify-center w-[100%] m-auto rounded-3xl p-2 gap-5 border-2 border-gray-300 shadow-xl sm:w-[50%]">
           {assets.map((item, i) => {
             return (
               <div

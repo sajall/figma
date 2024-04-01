@@ -11,18 +11,34 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Cards( ) {
 
 
   const [swiperRef, setSwiperRef] = useState(null);
 
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize); 
+    };
+  }, []);
   return (
+
+  
     <>
       <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={2.1}
+        slidesPerView={isLargeScreen ? 2.1 : 1}
         spaceBetween={30}
         slidesPerColumn={2}
         loop={true}
@@ -63,6 +79,7 @@ export default function Cards( ) {
                       className={`flex justify-center items-center ${
                         i < 2 ? "btn-gradient" : "bg-purple-600"
                       } rounded-full px-2 gap-2 h-[35px] text-white cursor-pointer `}
+                      key={i}
                     >
                       <img key={i} src={item.img} alt="" />
                       <span>{item.des}</span>
@@ -82,7 +99,7 @@ export default function Cards( ) {
                       </div>
                       <div className="flex flex-col justify-center">
                         <span className="font-bold text-lg">{item.name}</span>
-                        <div className="flex gap-2">
+                        <div className="flex flex-wrap gap-2">
                           {item.icons.map((elem, i) => {
                             return (
                               <div

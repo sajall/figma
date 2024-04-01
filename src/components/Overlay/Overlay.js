@@ -58,6 +58,7 @@ const Overlay = () => {
             {buttons.map((item, i) => {
               return (
                 <div
+                key={i}
                   className={`flex justify-center items-center ${
                     i < 2 ? "btn-gradient" : "bg-purple-600"
                   } rounded-full px-2 gap-2 h-[35px] text-white `}
@@ -83,7 +84,7 @@ const Overlay = () => {
 
           <div className=" flex flex-wrap justify-center gap-5 w-[95%] m-auto p-3 text-white ">
             {lowerButtons.map((item, i) => {
-              return <img src={item.img} alt="" />;
+              return <img key={i} src={item.img} alt="" />;
             })}
           </div>
         </div>

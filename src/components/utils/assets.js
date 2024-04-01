@@ -136,7 +136,7 @@ export const lowerButtons = [
       img: "rating.png",
       description: "Ratings & Reviews",
     },
-  ];
+  ]
 
   export const category = [
     {
@@ -175,7 +175,7 @@ export const lowerButtons = [
       name: "<category8 Name>",
       price: "2.5K",
     },
-  ];
+  ]
 
  export const photos = [
     {
@@ -196,7 +196,7 @@ export const lowerButtons = [
     {
       img: "photo.png",
     },
-  ];
+  ]
 
  export const employers = [
     {
