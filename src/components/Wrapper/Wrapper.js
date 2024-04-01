@@ -30,7 +30,7 @@ const Wrapper = () => {
           })}
         </div>
 
-        <div className="flex w-[95%]  m-auto gap-5 mt-10 rounded-lg p-4 ">
+        <div className="sm:flex w-[95%] m-auto gap-5 mt-10 rounded-lg p-4 ">
           {/* left */}
           <WrapperLeft />
 
