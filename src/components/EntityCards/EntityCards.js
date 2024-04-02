@@ -1,19 +1,16 @@
-"use client";
-import { entityCard } from "../utils/assets";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { entityCard } from "../utils/assets";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 
 export default function EntityCards() {
   const [swiperRef, setSwiperRef] = useState(null);
-
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -55,11 +52,11 @@ export default function EntityCards() {
                     className="block w-[100%] h-[80%] object-cover"
                   />
                 </div>
-                {/* two text*/}
+                {/*  text*/}
                 <div className="p-2 border-b-2 border-gray-200 w-[95%] m-auto">
                   <span className="text-xl font-bold">{slide.des}</span>
                 </div>
-                {/* three icons */}
+                {/*  icons */}
                 <div className="flex gap-3 p-2 border-b-2 border-gray-200 w-[95%] m-auto flex-wrap ">
                   {slide.icons.map((icon, i) => {
                     return (
@@ -67,8 +64,8 @@ export default function EntityCards() {
                         key={i}
                         className="flex  gap-1 justify-center items-center"
                       >
-                        <img src={icon.img} alt="" />
-                        <span>{icon.salary}</span>
+                        <img src={icon.img} alt="" className="cursor-pointer" />
+                        <span className="cursor-pointer">{icon.salary}</span>
                       </div>
                     );
                   })}
@@ -106,8 +103,14 @@ export default function EntityCards() {
                                   key={i}
                                   className="flex gap-1 justify-center items-center"
                                 >
-                                  <img src={elem.img} alt="" />
-                                  <span>{elem.des}</span>
+                                  <img
+                                    src={elem.img}
+                                    alt=""
+                                    className="cursor-pointer"
+                                  />
+                                  <span className="cursor-pointer">
+                                    {elem.des}
+                                  </span>
                                 </div>
                               );
                             })}

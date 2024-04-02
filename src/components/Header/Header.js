@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Drawer from "./Drawer";
 import { useState } from "react";
+import Drawer from "./Drawer";
 
 const Header = () => {
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {

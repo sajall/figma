@@ -7,7 +7,7 @@
   .border-gradient {
 
     background: rgb(13,24,36);
-    background: linear-gradient(10deg, rgba(13,24,36,1) 0%, rgba(71,59,125,1) 59%, rgba(181,32,67,1) 100%);
+    background: linear-gradient(30deg, rgb(6, 56, 110) 0%, rgb(25, 73, 207) 50%, rgb(236, 58, 99) 100%);
 
   }
 

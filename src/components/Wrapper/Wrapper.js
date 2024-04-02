@@ -14,13 +14,13 @@ const Wrapper = () => {
                 key={i}
                 className="flex justify-start items-center  gap-2 w-[130px] "
               >
-                <img src={item.img} alt="" />
+                <img src={item.img} alt="" className="cursor-pointer" />
 
                 <p
                   className={
                     item.description == "Comments"
-                      ? "font-bold text-lg bg-gradient-to-r from-blue-900 via-purple-900 to-purple-700 inline-block text-transparent bg-clip-text"
-                      : ""
+                      ? "hover:underline cursor-pointer font-bold text-lg bg-gradient-to-r from-blue-900 via-purple-900 to-purple-700 inline-block text-transparent bg-clip-text"
+                      : "hover:underline cursor-pointer"
                   }
                 >
                   {item.description}
@@ -37,6 +37,9 @@ const Wrapper = () => {
           {/* right */}
           <WrapperRight />
         </div>
+      </div>
+      <div className="flex justify-center">
+        <img src="footer-ad.png" alt="" />
       </div>
     </>
   );
