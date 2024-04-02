@@ -14,7 +14,7 @@ const Footer = () => {
         {/* top Section */}
         <div className="flex-wrap md:flex justify-between border-b-2 border-gray-300">
           {/* 1 */}
-          <div className=" w-[100%] md:w-[25%] ">
+          <div className=" w-[100%] md:w-[25%]">
             {/* text */}
             <div className=" p-2 text-white border-b-2 border-gray-300">
               <p>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* 2*/}
-          <div className=" w-[100%]  md:w-[12%] ">
+          <div className=" w-[100%]  md:w-[15%] px-5">
             <span className="text-xl font-bold text-white p-2">Home</span>
             {/* the story */}
             <div className="p-2 flex flex-col items-start gap-2">
@@ -137,7 +137,7 @@ const Footer = () => {
 
           {/* 3 */}
 
-          <div className=" w-[100%]  md:w-[12%] ">
+          <div className=" w-[100%]  md:w-[15%]  ">
             <span className="text-xl font-bold text-white p-2">The Vs</span>
             {/* The Vs */}
             <div className="p-2 flex flex-col items-start gap-2">
@@ -158,7 +158,7 @@ const Footer = () => {
 
           {/* 4 */}
 
-          <div className="w-[100%] md:w-[12%] ">
+          <div className="w-[100%] md:w-[15%] ">
             <span className="text-xl font-bold text-white p-2">The Assets</span>
             {/* The Vs */}
             <div className="p-2 flex flex-col items-start gap-2">
@@ -178,7 +178,7 @@ const Footer = () => {
           </div>
 
           {/* 5 */}
-          <div className=" w-[100%]  md:w-[12%]">
+          <div className=" w-[100%]  md:w-[15%] ">
             <span className="text-xl font-bold text-white p-2">
               The Members
             </span>
