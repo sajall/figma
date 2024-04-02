@@ -49,7 +49,7 @@ const Footer = () => {
             {/* icons */}
             <div className="flex justify-between  items-center py-3 border-b-2 border-gray-300">
               {footerIcons.map((icon, i) => {
-                return <img src={icon.img} alt="" className="cursor-pointer" />;
+                return <img key={i} src={icon.img} alt="" className="cursor-pointer" />;
               })}
             </div>
             {/* coming soon */}
@@ -71,7 +71,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white ">
                 {Story.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -89,7 +89,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white">
                 {opportunity.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -106,7 +106,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white gap-1 ">
                 {agency.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -123,7 +123,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white gap-1 ">
                 {hub.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -144,7 +144,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white gap-1 ">
                 {theVs.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -165,7 +165,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white gap-1">
                 {theAssets.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
@@ -187,7 +187,7 @@ const Footer = () => {
               <ul className="flex flex-col text-white gap-1">
                 {theMembers.map((item, i) => {
                   return (
-                    <li className="flex justify-start items-center gap-2">
+                    <li key={i} className="flex justify-start items-center gap-2">
                       <img src={item.img} alt="" className="cursor-pointer" />
                       <span className="hover:underline cursor-pointer">
                         {item.des}
